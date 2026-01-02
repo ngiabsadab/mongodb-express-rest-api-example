@@ -27,3 +27,20 @@ npm start
 ## Disclaimer
 
 Use at your own risk; not a supported MongoDB product
+
+
+
+rm -rf node_modules package-lock.json
+npm cache clean --force
+npm install
+npm start
+
+# 
+✅ Option 1 (FASTEST & SAFE): Use legacy OpenSSL provider
+export NODE_OPTIONS=--openssl-legacy-provider
+npm start
+
+"scripts": {
+  "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+  "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build"
+}
